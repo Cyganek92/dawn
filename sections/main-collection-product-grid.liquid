@@ -20,13 +20,18 @@
     }
   }
 {%- endstyle -%}
-
 <div class="section-{{ section.id }}-padding">
   {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
     {{ 'component-facets.css' | asset_url | stylesheet_tag }}
     <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
   
     <div class="page-width" id="main-collection-filters" data-id="{{ section.id }}">
+        {% if collection.handle == 'strays-of-streets' %}
+<p style="text-align:center;font-size:15px;margin-top: -4.5rem;background-color: rgba(67, 60, 52,0.1);padding: 1rem;border-radius: 5px;">Unterstütze beim Kauf dieses Artikels die Organisation <a href="https://straysofstreets.com/" target="_blank" rel="noopener noreferrer">Strays of Streets</a> mit 20% des Kaufpreises.
+Herz und Pfötchen spendet dank dir 20% an <a href="https://straysofstreets.com/" target="_blank" rel="noopener noreferrer">Strays of Streets</a>!
+Trage das Logo mit dem Gedanken daran, Tieren in Not zu helfen und diejenigen, die sich herzlich um die Tiere kümmern, finanziell zu unterstützen.<br>
+Wir freuen uns gemeinsam Gutes schaffen zu können!</p> 
+{% endif %}
       {% render 'facets', results: collection, enable_filtering: section.settings.enable_filtering, enable_sorting: section.settings.enable_sorting, collapse_on_larger_devices: section.settings.collapse_on_larger_devices %}
     </div>
   {%- endif -%}

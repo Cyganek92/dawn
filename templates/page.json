@@ -1,14 +1,1 @@
-{
-  "sections": {
-    "main": {
-      "type": "main-page",
-      "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
-      }
-    }
-  },
-  "order": [
-    "main"
-  ]
-}
+{"sections":{"4c2c757e-7082-4176-9215-6b965b805440":{"type":"image-banner","disabled":true,"blocks":{"template--14547686654012__4c2c757e-7082-4176-9215-6b965b805440-167355647735c376ea-0":{"type":"heading","settings":{"heading":"Was sagen unsere Hundefreunde?","heading_size":"h1"}},"template--14547686654012__4c2c757e-7082-4176-9215-6b965b805440-167355647735c376ea-1":{"type":"text","settings":{"text":"Wir freuen uns über alle Kunden, denen wir einen Lächeln ins Gesicht zaubern durften. Lass dich durch die Worte anderer Hundeeltern von unseren Produkten überzeugen und finde das passende Design für dich!","text_style":"body"}}},"block_order":["template--14547686654012__4c2c757e-7082-4176-9215-6b965b805440-167355647735c376ea-0","template--14547686654012__4c2c757e-7082-4176-9215-6b965b805440-167355647735c376ea-1"],"settings":{"image":"shopify:\/\/shop_images\/Unbenanntes_Projekt.png","image_overlay_opacity":0,"image_height":"small","adapt_height_first_image":false,"desktop_content_position":"middle-center","show_text_box":true,"desktop_content_alignment":"center","color_scheme":"background-2","mobile_content_alignment":"center","stack_images_on_mobile":true,"show_text_below":true}},"main":{"type":"main-page","settings":{"padding_top":28,"padding_bottom":28}}},"order":["4c2c757e-7082-4176-9215-6b965b805440","main"]}

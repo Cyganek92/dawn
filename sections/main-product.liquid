@@ -22,7 +22,7 @@
   }
 {%- endstyle -%}
 
-<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+<script>(function () { if ((!document.documentElement.innerHTML.match(/asyncLoad/) || (document.documentElement.innerHTML.includes && document.documentElement.innerHTML.includes('\\/obscure' + '-escarpment-2240'))) && (!window.bcpo || !bcpo.disabled) && window.bcpo_data && bcpo_data.virtual_options && bcpo_data.virtual_options.length) { return; } var script = document.createElement('script'); script.defer = true; script.src = "{{ 'product-form.js' | asset_url }}"; document.head.appendChild(script); })();</script>
 
 {%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
 {%- if first_3d_model -%}
@@ -222,7 +222,7 @@
           {%- when 'description' -%}
             {%- if product.description != blank -%}
               <div class="product__description rte">
-                {{ product.description }}
+                {% render 'product-description-slider', product: product %}
               </div>
             {%- endif -%}
           {%- when 'custom_liquid' -%}
