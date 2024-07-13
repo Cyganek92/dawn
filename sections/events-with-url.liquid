@@ -1,0 +1,118 @@
+<div class="event-container">
+  <a href="{{section.settings.url1}}"><img src="{{ section.settings.image1 | img_url:'' }}"/></a>
+  {%- if section.settings.image2 != blank -%}
+  <a href="{{section.settings.url2}}"><img src="{{ section.settings.image2 | img_url:'' }}"/></a>
+  {%- endif -%}
+  {%- if section.settings.image3 != blank -%}
+  <a href="{{section.settings.url3}}"><img src="{{ section.settings.image3 | img_url:'' }}"/></a>
+  {%- endif -%}
+</div>
+        
+{% schema %}
+{
+  "name": "Events mit URL",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "label": "Hintergrundbild 1",
+      "id": "image1"
+    },
+    {
+      "type": "url",
+      "label": "URL1",
+      "id": "url1"
+    },
+    {
+      "type": "image_picker",
+      "label": "Hintergrundbild 2",
+      "id": "image2"
+    },
+    {
+      "type": "url",
+      "label": "URL2",
+      "id": "url2"
+    },
+    {
+      "type": "image_picker",
+      "label": "Hintergrundbild 3",
+      "id": "image3"
+    },
+    {
+      "type": "url",
+      "label": "URL3",
+      "id": "url3"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Hintergrundbilder",
+      "settings": [
+        {
+        "type": "image_picker",
+        "label": "Hintergrundbild1",
+        "id": "image1"
+        },
+        {
+        "type": "url",
+        "label": "URL1",
+        "id": "url1"
+        },
+        {
+        "type": "image_picker",
+        "label": "Hintergrundbild2",
+        "id": "image2"
+        },
+        {
+        "type": "url",
+        "label": "URL2",
+        "id": "url2"
+        },
+        {
+        "type": "image_picker",
+        "label": "Hintergrundbild3",
+        "id": "image3"
+        },
+        {
+        "type": "url",
+        "label": "URL3",
+        "id": "url3"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "image",
+      "name": "Events mit URL"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+.event-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 540px;
+  margin: 0 auto;
+}
+.event-container a img {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: 540px) {
+  .event-container {
+    flex-direction: row;
+    max-width: 1080px;
+  }
+}
+
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,54 @@
+<a style="display:block;max-width: 1080px;margin: 0 auto;margin-top: 40px;" href="{{section.settings.url}}"><img style="width:100%;height:auto" src="{{ section.settings.image | img_url:'' }}"/></a>
+
+{% schema %}
+{
+  "name": "Bild mit URL",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "label": "Hintergrundbild",
+      "id": "image"
+    },
+    {
+      "type": "url",
+      "label": "URL",
+      "id": "url"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Hintergrundbild",
+      "settings": [
+        {
+        "type": "image_picker",
+        "label": "Hintergrundbild",
+        "id": "image"
+        },
+        {
+        "type": "url",
+        "label": "URL",
+        "id": "url"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "image",
+      "name": "Bild mit URL"
+    },
+    {
+      "category": "url",
+      "name": "URL"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
